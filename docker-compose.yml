@@ -1,0 +1,25 @@
+version: '3'
+services:
+  elasticsearch:
+    build:
+      context: ./elasticsearch
+    ports:
+      - "9200:9200" #API calls over HTTP
+      - "9300:9300" #Protocol used for communications between nodes in a cluster
+    healthcheck:
+      test: ["CMD-SHELL", "curl --silent --fail localhost:9200/_cluster/health || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+    networks:
+      - elastic
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    image: elastic_search:v1
+#create the volume
+volumes:
+  esdata:
+#create the network
+networks:
+  elastic:
+    driver: bridge
