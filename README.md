@@ -60,5 +60,10 @@
      docker inspect container_id
      ```
 Attached Screenshot For reference 
-   ![image](https://github.com/user-attachments/assets/a37f24e7-db4c-4a3e-9d86-7ae0636c6ca2)
+**Elasticsearch Status**
+         ![image](https://github.com/user-attachments/assets/a37f24e7-db4c-4a3e-9d86-7ae0636c6ca2)
+  
+**Cluster Health**
+        ![image](https://github.com/user-attachments/assets/2201c83a-7f42-4754-be2c-7ce7ff8dbcf0)
+
 
